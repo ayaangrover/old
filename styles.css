@@ -103,10 +103,12 @@ html, body {
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 10px;
+    text-color: #ffffff;
   }
   
   .box-paragraph {
     font-size: 16px;
     line-height: 2; /* Add spacing between lines of text */
+    text-color: #ffffff;
   }
   
