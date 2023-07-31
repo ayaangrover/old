@@ -71,3 +71,19 @@ window.onload = function() {
 
 // Call the fadeOutScrollBox function when the user scrolls
 window.addEventListener('scroll', fadeOutScrollBox);
+
+// Get the current date
+const currentDate = new Date();
+
+// Set your birthday (month is 0-based, so January is 0)
+const birthday = new Date(currentDate.getFullYear(), 0, 3);
+
+// Check if it's your birthday
+if (
+  currentDate.getDate() === birthday.getDate() &&
+  currentDate.getMonth() === birthday.getMonth()
+) {
+// Change favicon to "me-celebrate.png"
+  const link = document.querySelector("link[rel~='icon']");
+  link.href = "path/to/me-celebrate.png";
+}
