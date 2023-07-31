@@ -1,0 +1,111 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: auto; /* Enable scrolling */
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url("https://images.unsplash.com/photo-1689267305146-155a1459752c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3828&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 1); /* Start with 100% darkness */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  /* Add styles for the light/dark mode button */
+  .light-dark-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Set container height to 100% */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    text-align: right;
+    padding: 40px; /* Add more padding */
+  }
+  
+  #title {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+    font-size: 48px; /* Increase title text size */
+    margin: 10px; /* Add margin */
+    margin-right: 80px;
+  }
+  
+  #paragraph {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 2s ease-out, transform 2s ease-out;
+    font-size: 20px; /* Adjust paragraph text size */
+    line-height: 1.6; /* Adjust line-height for better readability */
+    margin: 10px; /* Add margin */
+    margin-right: 80px;
+    max-width: 600px; /* Set maximum width for the paragraph */
+    word-wrap: break-word; /* Allow the paragraph to wrap */
+  }
+  
+  .scroll-down-box {
+    position: absolute;
+    bottom: 50px; /* Adjust the position */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    display: flex; /* Use flexbox to align text and arrow */
+    align-items: center; /* Center items vertically */
+    opacity: 1;
+    transition: opacity 1s ease-out;
+  }
+  
+  .down-arrow {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Make the arrow bold */
+    font-size: 36px;
+    margin-left: 5px; /* Add some space between text and arrow */
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px; /* Add margin between title and boxes */
+    margin-bottom: 80px;
+    opacity: 1;
+  }
+  
+  .box {
+    flex: 1; /* Use flexbox to distribute available space evenly */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .box-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .box-paragraph {
+    font-size: 16px;
+    line-height: 2; /* Add spacing between lines of text */
+  }
+  
