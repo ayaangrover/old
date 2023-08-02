@@ -154,22 +154,46 @@ body {
 }
 
 .icons-container a svg {
-  stroke: #9bbdcd; /* Icon color */
-  stroke-width: 2;
   width: 20px;
   height: 20px;
-  fill: none; /* Remove fill */
+  fill: #9bbdcd00; /* Use currentColor to inherit the icon color from parent (stroke or fill) */
 }
 
-.icons-container a svg:hover {
-  stroke: #ffffff; /* Icon color */
-  stroke-width: 2;
-  width: 20px;
-  height: 20px;
-  fill: none; /* Remove fill */
+.icons-container a:hover svg {
+  stroke-width: 0; /* Remove the stroke on hover */
+  fill: #ffffff; /* Set the fill color on hover */
 }
 
 .icons-container a:hover {
   transform: translateY(-5px);
   border-color: #ffffff00; /* Change outline color on hover */
+}
+
+/* Style the LinkedIn icon with fill and stroke */
+.icons-container .linkedin-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #9bbdcd00; /* Set the fill color for LinkedIn icon */
+  stroke: #9bbdcd; /* Set the stroke color for LinkedIn icon */
+}
+
+/* Style the GitHub icon with fill and stroke */
+.icons-container .github-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #9bbdcd00; /* Set the fill color for GitHub icon */
+  stroke: #9bbdcd; /* Set the stroke color for GitHub icon */
+}
+
+/* Style the Dribbble icon without stroke (only fill) */
+.icons-container .dribbble-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #9bbdcd; /* Use currentColor to inherit the icon color from parent (fill) */
+  stroke-width: 0; /* Remove the stroke */
+}
+
+/* Change fill color on hover for the Dribbble icon */
+.icons-container .dribbble-icon svg:hover {
+  fill: #ffffff; /* Set the fill color on hover */
 }
