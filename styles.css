@@ -89,12 +89,32 @@ body {
   opacity: 1;
 }
 
-.box {
+.box-left {
   flex: 1; /* Use flexbox to distribute available space evenly */
   padding: 20px;
   background-color: rgba(24, 26, 27, 0.6); /* Semi-transparent white background */
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 90px;
+  margin-right: 30px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  color: white; /* Set text color to white */
+}
+.box-middle {
+  flex: 1; /* Use flexbox to distribute available space evenly */
+  padding: 20px;
+  background-color: rgba(24, 26, 27, 0.6); /* Semi-transparent white background */
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  color: white; /* Set text color to white */
+}
+.box-right {
+  flex: 1; /* Use flexbox to distribute available space evenly */
+  padding: 20px;
+  background-color: rgba(24, 26, 27, 0.6); /* Semi-transparent white background */
+  margin-left: 30px;
+  margin-right: 90px;
   margin-bottom: 40px;
   border-radius: 10px;
   color: white; /* Set text color to white */
@@ -109,4 +129,47 @@ body {
 .box-paragraph {
   font-size: 16px;
   line-height: 2; /* Add spacing between lines of text */
+}
+
+.icons-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.icons-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #9bbdcd00; /* Outline color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+  background-color: transparent;
+}
+
+.icons-container a svg {
+  stroke: #9bbdcd; /* Icon color */
+  stroke-width: 2;
+  width: 20px;
+  height: 20px;
+  fill: none; /* Remove fill */
+}
+
+.icons-container a svg:hover {
+  stroke: #ffffff; /* Icon color */
+  stroke-width: 2;
+  width: 20px;
+  height: 20px;
+  fill: none; /* Remove fill */
+}
+
+.icons-container a:hover {
+  transform: translateY(-5px);
+  border-color: #ffffff00; /* Change outline color on hover */
 }
